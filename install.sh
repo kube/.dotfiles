@@ -11,3 +11,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrew_fix/master
 
 # Apply config
 source ~/.zshrc
+
+# Install Node
+brew install node
+
+# Install Node global modules
+npm install --global gulp typescript
