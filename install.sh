@@ -1,9 +1,10 @@
 # Create .zshrc that will source all dotfiles
 cat > ~/.zshrc <<EOL
-source ~/.dotfiles/*.zsh
+source ~/.dotfiles/.*.zsh
 EOL
 
 # Install antigen
+mkdir -p $HOME/.antigen
 curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.antigen/antigen.zsh
 
 # Install 42 Homebrew Fix
