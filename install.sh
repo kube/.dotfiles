@@ -1,6 +1,7 @@
 # Create .zshrc that will source all dotfiles
 cat > ~/.zshrc <<EOL
-source ~/.dotfiles/.*.zsh
+# Source all dotfiles
+for f in ~/.dotfiles/.*.zsh; do source \$f; done
 EOL
 
 # Install antigen
@@ -11,9 +12,8 @@ curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh >
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrew_fix/master/install.sh)"
 
 # Apply config
-source ~/.dotfiles/.*.zsh
+for f in ~/.dotfiles/.*.zsh; do source $f; done
 EOL
 
 # Install Node
 brew install node
-
