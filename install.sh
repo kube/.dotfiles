@@ -11,10 +11,9 @@ curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh >
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/kube/42homebrew_fix/master/install.sh)"
 
 # Apply config
-source ~/.zshrc
+source ~/.dotfiles/.*.zsh
+EOL
 
 # Install Node
 brew install node
 
-# Install Node global modules
-npm install --global gulp typescript
