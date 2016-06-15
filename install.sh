@@ -17,3 +17,6 @@ EOL
 
 # Install Node
 brew install node
+
+# Install Python
+brew install python
