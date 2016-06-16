@@ -1,2 +1,2 @@
 # VSCode commandline
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
