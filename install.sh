@@ -14,4 +14,3 @@ curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh >
 
 # Apply config
 for f in ~/.dotfiles/.*.zsh; do source $f; done
-EOL
