@@ -10,6 +10,6 @@ fi
 
 # Install antigen
 mkdir -p $HOME/.antigen
-curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.antigen/antigen.zsh
+curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > $HOME/.antigen/antigen.zsh
 
 echo "Open a new terminal to finish installation"
