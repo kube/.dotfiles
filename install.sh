@@ -22,4 +22,5 @@ fi
 rm -rf $HOME/.zgen
 git clone https://github.com/tarjoilija/zgen $HOME/.zgen
 
-echo "Open a new terminal to finish installation"
+# Reset zsh to finish installation
+exec zsh -l
