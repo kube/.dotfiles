@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
       #########.
      ########",#:
@@ -9,14 +9,13 @@
      ## ## ## :##
       ## ## ##."
 
-# Create .zshrc that will source all dotfiles
-if ! grep -q "# Source all dotfiles" "$HOME/.zshrc"; then
+# Append dotfiles sourcing to .zshrc
+if ! grep -q "# Dotfiles sourcing" ~/.zshrc; then
+cat >> ~/.zshrc <<EOL
 
-cat > ~/.zshrc <<EOL
-# Source all dotfiles
-for f in ~/.dotfiles/.*.zsh; do source \$f; done
+# Dotfiles sourcing
+source \$HOME/.dotfiles/index.sh
 EOL
-
 fi
 
 # Install zgen
