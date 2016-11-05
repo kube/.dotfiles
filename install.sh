@@ -1,3 +1,14 @@
+#!/bin/zsh
+
+      #########.
+     ########",#:
+   #########',##".
+  ##'##'## .##',##.
+   ## ## ## # ##",#.
+    ## ## ## ## ##'
+     ## ## ## :##
+      ## ## ##."
+
 # Create .zshrc that will source all dotfiles
 if ! grep -q "# Source all dotfiles" "$HOME/.zshrc"; then
 
@@ -8,8 +19,8 @@ EOL
 
 fi
 
-# Install antigen
-mkdir -p $HOME/.antigen
-curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > $HOME/.antigen/antigen.zsh
+# Install zgen
+rm -rf $HOME/.zgen
+git clone https://github.com/tarjoilija/zgen $HOME/.zgen
 
 echo "Open a new terminal to finish installation"
