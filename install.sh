@@ -9,15 +9,18 @@
      ## ## ## :##
       ## ## ##."
 
-# Append dotfiles sourcing to .zshrc
-if ! grep -q "# Dotfiles sourcing" ~/.zshrc; then
-cat >> ~/.zshrc <<EOL
+case "$(uname -s)" in
+  Darwin)
+    sh install_mac.sh;;
 
-# Dotfiles sourcing
-source \$HOME/.dotfiles/index.sh
-EOL
-fi
+  Linux)
+    sh install_linux.sh;;
 
+  CYGWIN*|MINGW32*|MSYS*)
+    echo 'Windows is unsupported'
+    exit 1;;
 
-# Reset zsh to finish installation
-exec zsh -l
+  *)
+    echo 'Unsupported OS'
+    exit 1;;
+esac
